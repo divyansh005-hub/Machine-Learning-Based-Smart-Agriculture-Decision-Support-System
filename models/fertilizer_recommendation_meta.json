@@ -1,0 +1,620 @@
+{
+  "module": "fertilizer_recommendation",
+  "selected_model": "Random Forest (Balanced)",
+  "selection_reason": "Random Forest (Balanced) achieved highest Macro-F1 (0.7131 vs 0.6697) and effectively resolved rare class representation (e.g. SSP) with balanced class weights.",
+  "features": [
+    "Soil_pH",
+    "Soil_Moisture",
+    "Organic_Carbon",
+    "Electrical_Conductivity",
+    "Nitrogen_Level",
+    "Phosphorus_Level",
+    "Potassium_Level",
+    "Temperature",
+    "Humidity",
+    "Rainfall",
+    "Fertilizer_Used_Last_Season",
+    "Yield_Last_Season",
+    "Soil_Type",
+    "Crop_Type",
+    "Crop_Growth_Stage",
+    "Season",
+    "Irrigation_Type",
+    "Previous_Crop",
+    "Region"
+  ],
+  "numeric_features": [
+    "Soil_pH",
+    "Soil_Moisture",
+    "Organic_Carbon",
+    "Electrical_Conductivity",
+    "Nitrogen_Level",
+    "Phosphorus_Level",
+    "Potassium_Level",
+    "Temperature",
+    "Humidity",
+    "Rainfall",
+    "Fertilizer_Used_Last_Season",
+    "Yield_Last_Season"
+  ],
+  "categorical_features": [
+    "Soil_Type",
+    "Crop_Type",
+    "Crop_Growth_Stage",
+    "Season",
+    "Irrigation_Type",
+    "Previous_Crop",
+    "Region"
+  ],
+  "target": "Recommended_Fertilizer",
+  "labels": [
+    "Compost",
+    "DAP",
+    "MOP",
+    "NPK",
+    "SSP",
+    "Urea",
+    "Zinc Sulphate"
+  ],
+  "train_samples": 8000,
+  "test_samples": 2000,
+  "metrics": {
+    "macro_f1": 0.713131692062334,
+    "accuracy": 0.8705,
+    "weighted_f1": 0.8660290163567208,
+    "macro_precision": 0.7130122814775977,
+    "macro_recall": 0.7211106461904195,
+    "labels": [
+      "Compost",
+      "DAP",
+      "MOP",
+      "NPK",
+      "SSP",
+      "Urea",
+      "Zinc Sulphate"
+    ],
+    "classification_report": {
+      "Compost": {
+        "precision": 0.7655502392344498,
+        "recall": 0.8040201005025126,
+        "f1-score": 0.7843137254901961,
+        "support": 199.0
+      },
+      "DAP": {
+        "precision": 0.9608540925266904,
+        "recall": 0.9246575342465754,
+        "f1-score": 0.9424083769633508,
+        "support": 584.0
+      },
+      "MOP": {
+        "precision": 0.8551236749116607,
+        "recall": 0.8581560283687943,
+        "f1-score": 0.856637168141593,
+        "support": 282.0
+      },
+      "NPK": {
+        "precision": 0.8712871287128713,
+        "recall": 0.6875,
+        "f1-score": 0.7685589519650655,
+        "support": 128.0
+      },
+      "SSP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 37.0
+      },
+      "Urea": {
+        "precision": 0.9244094488188976,
+        "recall": 0.9467741935483871,
+        "f1-score": 0.9354581673306773,
+        "support": 620.0
+      },
+      "Zinc Sulphate": {
+        "precision": 0.6138613861386139,
+        "recall": 0.8266666666666667,
+        "f1-score": 0.7045454545454546,
+        "support": 150.0
+      },
+      "accuracy": 0.8705,
+      "macro avg": {
+        "precision": 0.7130122814775977,
+        "recall": 0.7211106461904195,
+        "f1-score": 0.713131692062334,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 0.8656829913160436,
+        "recall": 0.8705,
+        "f1-score": 0.8660290163567208,
+        "support": 2000.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        160,
+        5,
+        7,
+        2,
+        2,
+        11,
+        12
+      ],
+      [
+        6,
+        540,
+        10,
+        4,
+        2,
+        6,
+        16
+      ],
+      [
+        10,
+        3,
+        242,
+        2,
+        0,
+        10,
+        15
+      ],
+      [
+        9,
+        3,
+        8,
+        88,
+        0,
+        5,
+        15
+      ],
+      [
+        4,
+        6,
+        4,
+        4,
+        0,
+        7,
+        12
+      ],
+      [
+        11,
+        3,
+        6,
+        1,
+        4,
+        587,
+        8
+      ],
+      [
+        9,
+        2,
+        6,
+        0,
+        0,
+        9,
+        124
+      ]
+    ],
+    "total_test_samples": 2000
+  },
+  "all_candidates": {
+    "DummyClassifier (Baseline)": {
+      "macro_f1": 0.06761177753544166,
+      "accuracy": 0.31,
+      "weighted_f1": 0.1467175572519084,
+      "macro_precision": 0.04428571428571428,
+      "macro_recall": 0.14285714285714285,
+      "labels": [
+        "Compost",
+        "DAP",
+        "MOP",
+        "NPK",
+        "SSP",
+        "Urea",
+        "Zinc Sulphate"
+      ],
+      "classification_report": {
+        "Compost": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 199.0
+        },
+        "DAP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 584.0
+        },
+        "MOP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 282.0
+        },
+        "NPK": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 128.0
+        },
+        "SSP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 37.0
+        },
+        "Urea": {
+          "precision": 0.31,
+          "recall": 1.0,
+          "f1-score": 0.4732824427480916,
+          "support": 620.0
+        },
+        "Zinc Sulphate": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 150.0
+        },
+        "accuracy": 0.31,
+        "macro avg": {
+          "precision": 0.04428571428571428,
+          "recall": 0.14285714285714285,
+          "f1-score": 0.06761177753544166,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.09609999999999999,
+          "recall": 0.31,
+          "f1-score": 0.1467175572519084,
+          "support": 2000.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          199,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          584,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          282,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          620,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          150,
+          0
+        ]
+      ],
+      "total_test_samples": 2000
+    },
+    "Logistic Regression (Balanced)": {
+      "macro_f1": 0.6697266233990141,
+      "accuracy": 0.781,
+      "weighted_f1": 0.7999631168770233,
+      "macro_precision": 0.6686477266589346,
+      "macro_recall": 0.6939031680184053,
+      "labels": [
+        "Compost",
+        "DAP",
+        "MOP",
+        "NPK",
+        "SSP",
+        "Urea",
+        "Zinc Sulphate"
+      ],
+      "classification_report": {
+        "Compost": {
+          "precision": 0.6589861751152074,
+          "recall": 0.7185929648241206,
+          "f1-score": 0.6875,
+          "support": 199.0
+        },
+        "DAP": {
+          "precision": 0.9289940828402367,
+          "recall": 0.8065068493150684,
+          "f1-score": 0.8634280476626948,
+          "support": 584.0
+        },
+        "MOP": {
+          "precision": 0.7612456747404844,
+          "recall": 0.7801418439716312,
+          "f1-score": 0.7705779334500875,
+          "support": 282.0
+        },
+        "NPK": {
+          "precision": 0.68,
+          "recall": 0.6640625,
+          "f1-score": 0.6719367588932806,
+          "support": 128.0
+        },
+        "SSP": {
+          "precision": 0.09848484848484848,
+          "recall": 0.35135135135135137,
+          "f1-score": 0.15384615384615385,
+          "support": 37.0
+        },
+        "Urea": {
+          "precision": 0.9360568383658969,
+          "recall": 0.85,
+          "f1-score": 0.8909551986475064,
+          "support": 620.0
+        },
+        "Zinc Sulphate": {
+          "precision": 0.6167664670658682,
+          "recall": 0.6866666666666666,
+          "f1-score": 0.6498422712933754,
+          "support": 150.0
+        },
+        "accuracy": 0.781,
+        "macro avg": {
+          "precision": 0.6686477266589346,
+          "recall": 0.6939031680184053,
+          "f1-score": 0.6697266233990141,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.8259481113720584,
+          "recall": 0.781,
+          "f1-score": 0.7999631168770233,
+          "support": 2000.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          143,
+          1,
+          7,
+          10,
+          26,
+          2,
+          10
+        ],
+        [
+          21,
+          471,
+          30,
+          12,
+          22,
+          13,
+          15
+        ],
+        [
+          21,
+          1,
+          220,
+          3,
+          13,
+          10,
+          14
+        ],
+        [
+          3,
+          3,
+          10,
+          85,
+          18,
+          1,
+          8
+        ],
+        [
+          2,
+          0,
+          9,
+          2,
+          13,
+          4,
+          7
+        ],
+        [
+          21,
+          31,
+          9,
+          3,
+          19,
+          527,
+          10
+        ],
+        [
+          6,
+          0,
+          4,
+          10,
+          21,
+          6,
+          103
+        ]
+      ],
+      "total_test_samples": 2000
+    },
+    "Random Forest (Balanced)": {
+      "macro_f1": 0.713131692062334,
+      "accuracy": 0.8705,
+      "weighted_f1": 0.8660290163567208,
+      "macro_precision": 0.7130122814775977,
+      "macro_recall": 0.7211106461904195,
+      "labels": [
+        "Compost",
+        "DAP",
+        "MOP",
+        "NPK",
+        "SSP",
+        "Urea",
+        "Zinc Sulphate"
+      ],
+      "classification_report": {
+        "Compost": {
+          "precision": 0.7655502392344498,
+          "recall": 0.8040201005025126,
+          "f1-score": 0.7843137254901961,
+          "support": 199.0
+        },
+        "DAP": {
+          "precision": 0.9608540925266904,
+          "recall": 0.9246575342465754,
+          "f1-score": 0.9424083769633508,
+          "support": 584.0
+        },
+        "MOP": {
+          "precision": 0.8551236749116607,
+          "recall": 0.8581560283687943,
+          "f1-score": 0.856637168141593,
+          "support": 282.0
+        },
+        "NPK": {
+          "precision": 0.8712871287128713,
+          "recall": 0.6875,
+          "f1-score": 0.7685589519650655,
+          "support": 128.0
+        },
+        "SSP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 37.0
+        },
+        "Urea": {
+          "precision": 0.9244094488188976,
+          "recall": 0.9467741935483871,
+          "f1-score": 0.9354581673306773,
+          "support": 620.0
+        },
+        "Zinc Sulphate": {
+          "precision": 0.6138613861386139,
+          "recall": 0.8266666666666667,
+          "f1-score": 0.7045454545454546,
+          "support": 150.0
+        },
+        "accuracy": 0.8705,
+        "macro avg": {
+          "precision": 0.7130122814775977,
+          "recall": 0.7211106461904195,
+          "f1-score": 0.713131692062334,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.8656829913160436,
+          "recall": 0.8705,
+          "f1-score": 0.8660290163567208,
+          "support": 2000.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          160,
+          5,
+          7,
+          2,
+          2,
+          11,
+          12
+        ],
+        [
+          6,
+          540,
+          10,
+          4,
+          2,
+          6,
+          16
+        ],
+        [
+          10,
+          3,
+          242,
+          2,
+          0,
+          10,
+          15
+        ],
+        [
+          9,
+          3,
+          8,
+          88,
+          0,
+          5,
+          15
+        ],
+        [
+          4,
+          6,
+          4,
+          4,
+          0,
+          7,
+          12
+        ],
+        [
+          11,
+          3,
+          6,
+          1,
+          4,
+          587,
+          8
+        ],
+        [
+          9,
+          2,
+          6,
+          0,
+          0,
+          9,
+          124
+        ]
+      ],
+      "total_test_samples": 2000
+    }
+  },
+  "training_timestamp": "2026-10-26T06:06:15.893256"
+}

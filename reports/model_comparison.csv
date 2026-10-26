@@ -1,0 +1,10 @@
+Module,Model,Primary_Metric_Name,Primary_Metric_Value,Secondary_Metric_Name,Secondary_Metric_Value,Is_Selected,Split,Train_Size,Test_Size
+Crop Recommendation,DummyClassifier (Baseline),Macro-F1,0.004,Accuracy,0.0455,False,Stratified 80:20 (random_state=42),1760,440
+Crop Recommendation,Logistic Regression,Macro-F1,0.9725,Accuracy,0.9727,False,Stratified 80:20 (random_state=42),1760,440
+Crop Recommendation,Random Forest,Macro-F1,0.9955,Accuracy,0.9955,True,Stratified 80:20 (random_state=42),1760,440
+Fertilizer Recommendation,DummyClassifier (Baseline),Macro-F1,0.0676,Accuracy,0.31,False,Stratified 80:20 (random_state=42),8000,2000
+Fertilizer Recommendation,Logistic Regression (Balanced),Macro-F1,0.6697,Accuracy,0.781,False,Stratified 80:20 (random_state=42),8000,2000
+Fertilizer Recommendation,Random Forest (Balanced),Macro-F1,0.7131,Accuracy,0.8705,True,Stratified 80:20 (random_state=42),8000,2000
+Crop Yield Prediction,Mean Baseline (DummyRegressor),RMSE (hg/ha),96284.44,MAE (hg/ha),68796.79,False,"Chronological (Train <= 2009, Test >= 2010)",21305,4627
+Crop Yield Prediction,Linear Regression,RMSE (hg/ha),50470.16,MAE (hg/ha),33809.46,False,"Chronological (Train <= 2009, Test >= 2010)",21305,4627
+Crop Yield Prediction,Random Forest Regressor,RMSE (hg/ha),20302.37,MAE (hg/ha),10454.19,True,"Chronological (Train <= 2009, Test >= 2010)",21305,4627

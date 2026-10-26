@@ -1,0 +1,91 @@
+{
+  "module": "yield_prediction",
+  "selected_model": "Random Forest Regressor",
+  "selection_reason": "Random Forest Regressor achieved substantially lower held-out test RMSE (20302.37 hg/ha vs 50470.16 hg/ha) and superior R\u00b2 (0.9546 vs 0.7192) on the temporal 2010-2013 test horizon.",
+  "features": [
+    "Area",
+    "Item",
+    "Year",
+    "average_rain_fall_mm_per_year",
+    "pesticides_tonnes",
+    "avg_temp"
+  ],
+  "categorical_features": [
+    "Area",
+    "Item"
+  ],
+  "numeric_features": [
+    "Year",
+    "average_rain_fall_mm_per_year",
+    "pesticides_tonnes",
+    "avg_temp"
+  ],
+  "target": "hg/ha_yield",
+  "target_unit": "hg/ha",
+  "split_strategy": "Chronological (Train: 1990-2009, Test: 2010-2013)",
+  "train_samples": 21305,
+  "test_samples": 4627,
+  "metrics": {
+    "rmse": 20302.37019453123,
+    "mae": 10454.18946788232,
+    "r2": 0.9545669974983595,
+    "target_unit": "hg/ha",
+    "rmse_pct_of_mean": 22.92826449719359,
+    "mae_pct_of_mean": 11.806326991709934,
+    "rmse_tonnes_per_ha": 2.030237019453123,
+    "mae_tonnes_per_ha": 1.045418946788232,
+    "target_mean": 88547.3481737627,
+    "target_std": 95249.13122026509,
+    "target_min": 849.0,
+    "target_max": 501412.0,
+    "total_test_samples": 4627
+  },
+  "all_candidates": {
+    "Mean Baseline (DummyRegressor)": {
+      "rmse": 96284.44461925208,
+      "mae": 68796.78504855558,
+      "r2": -0.021857209011196366,
+      "target_unit": "hg/ha",
+      "rmse_pct_of_mean": 108.73780706600759,
+      "mae_pct_of_mean": 77.69491291094432,
+      "rmse_tonnes_per_ha": 9.62844446192521,
+      "mae_tonnes_per_ha": 6.879678504855558,
+      "target_mean": 88547.3481737627,
+      "target_std": 95249.13122026509,
+      "target_min": 849.0,
+      "target_max": 501412.0,
+      "total_test_samples": 4627
+    },
+    "Linear Regression": {
+      "rmse": 50470.157090427565,
+      "mae": 33809.46495301825,
+      "r2": 0.7192322208526007,
+      "target_unit": "hg/ha",
+      "rmse_pct_of_mean": 56.997931763452044,
+      "mae_pct_of_mean": 38.182357405748114,
+      "rmse_tonnes_per_ha": 5.047015709042756,
+      "mae_tonnes_per_ha": 3.380946495301825,
+      "target_mean": 88547.3481737627,
+      "target_std": 95249.13122026509,
+      "target_min": 849.0,
+      "target_max": 501412.0,
+      "total_test_samples": 4627
+    },
+    "Random Forest Regressor": {
+      "rmse": 20302.37019453123,
+      "mae": 10454.18946788232,
+      "r2": 0.9545669974983595,
+      "target_unit": "hg/ha",
+      "rmse_pct_of_mean": 22.92826449719359,
+      "mae_pct_of_mean": 11.806326991709934,
+      "rmse_tonnes_per_ha": 2.030237019453123,
+      "mae_tonnes_per_ha": 1.045418946788232,
+      "target_mean": 88547.3481737627,
+      "target_std": 95249.13122026509,
+      "target_min": 849.0,
+      "target_max": 501412.0,
+      "total_test_samples": 4627
+    }
+  },
+  "training_timestamp": "2026-10-26T06:06:18.259167"
+}
