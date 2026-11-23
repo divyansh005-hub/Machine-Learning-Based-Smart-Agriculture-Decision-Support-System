@@ -1,0 +1,17 @@
+Test Case ID: TC-13
+Requirement: FR-13
+Test: Agronomic disclaimers and limitations audit
+Execution Timestamp: 2026-11-24 00:11:04
+
+Verified Disclaimers:
+1. Crop Recommendation Notice:
+   "Model recommendations are purely predictive statistical suggestions based on historical training data. They do not replace comprehensive local soil tests, certified agronomist counsel, or official extension services."
+
+2. Fertilizer Recommendation Notice:
+   "Fertilizer recommendations represent machine learning estimations derived from historical patterns. Fertilizer selection for actual farms must be verified through certified soil health card analysis and qualified agronomic consultation."
+
+3. Crop Yield Prediction Notice:
+   "Predicted yields reflect historical FAO macroeconomic country-level aggregates. Local microclimates, farm management, pest outbreaks, and irrigation practices cause significant variance at the individual farm parcel scale."
+
+Result: Disclaimers present across all prediction endpoints and documentation.
+STATUS: PASS

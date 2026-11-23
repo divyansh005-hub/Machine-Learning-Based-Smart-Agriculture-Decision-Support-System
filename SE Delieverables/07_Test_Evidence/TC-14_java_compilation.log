@@ -1,0 +1,12 @@
+Test Case ID: TC-14
+Requirement: Java prototype compilation verification
+Command: javac AgricultureService.java AgriSmartApp.java InputValidator.java
+Working Directory: D:\NIIT_University\Projects\Smart Agricultutre\SE Delieverables\05_Source_Code\src
+Execution Timestamp: 2026-11-24 00:11:04
+
+Compiler Output:
+STDOUT: 
+STDERR: 
+Exit Code: 0
+Result: All 3 Java classes compiled without errors or warnings.
+STATUS: PASS

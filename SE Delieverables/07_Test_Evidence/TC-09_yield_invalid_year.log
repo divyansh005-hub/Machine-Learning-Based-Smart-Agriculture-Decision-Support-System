@@ -1,0 +1,10 @@
+Test Case ID: TC-09
+Requirement: FR-08, FR-12
+Test: Out-of-range year rejection (Year=2055; permitted range: 1960 - 2050)
+Execution Timestamp: 2026-11-24 00:11:04
+
+Intercepted Exception: InputValidationError
+Validation Error Message: "Year 2055.0 is outside realistic range [1960, 2050]."
+
+Result: Extreme future extrapolation year rejected before inference.
+STATUS: PASS

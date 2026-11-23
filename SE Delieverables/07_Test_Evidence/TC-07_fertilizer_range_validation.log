@@ -1,0 +1,10 @@
+Test Case ID: TC-07
+Requirement: FR-06
+Test: Out-of-range numeric rejection (Soil_pH=14.0)
+Execution Timestamp: 2026-11-24 00:11:04
+
+Intercepted Exception: InputValidationError
+Validation Error Message: "Feature 'Soil pH' value 14.0 is outside acceptable range [4.5, 8.5] pH."
+
+Result: Out-of-range numeric value trapped cleanly.
+STATUS: PASS

@@ -1,0 +1,14 @@
+Test Case ID: TC-08
+Requirement: FR-08, FR-09
+Test: Valid crop yield regression input
+Inputs: Area=India, Item=Wheat, Year=2013, rainfall=1083.0 mm/year, pesticides=50000.0 tonnes, avg_temp=24.5°C
+Execution Timestamp: 2026-11-24 00:11:04
+
+Regression Output:
+  Predicted Yield (Native FAO unit): 26,124.92 hg/ha
+  Predicted Yield (Converted unit): 2.612 tonnes/ha
+  Verified Unit Formula: tonnes/ha = hg/ha / 10,000
+  Disclaimer Included: True
+
+Result: Realistic regression estimate generated with verified dual-unit representation.
+STATUS: PASS

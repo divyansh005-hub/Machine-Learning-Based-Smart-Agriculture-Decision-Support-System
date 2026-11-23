@@ -59,9 +59,18 @@ def main():
             "ℹ️ About & Limitations": render_about_page,
         }
 
+        default_idx = 0
+        qp = st.query_params.get("page", "").lower()
+        if qp:
+            for i, k in enumerate(pages.keys()):
+                if qp in k.lower():
+                    default_idx = i
+                    break
+
         selected_page = st.radio(
             "Select Section",
             options=list(pages.keys()),
+            index=default_idx,
             label_visibility="collapsed",
         )
 

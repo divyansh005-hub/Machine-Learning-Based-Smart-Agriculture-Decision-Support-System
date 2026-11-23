@@ -1,0 +1,10 @@
+Test Case ID: TC-04
+Requirement: FR-03
+Test: Missing feature rejection (omitted 'rainfall')
+Execution Timestamp: 2026-11-24 00:11:04
+
+Intercepted Exception: InputValidationError
+Validation Error Message: "Missing required crop feature: 'rainfall'"
+
+Result: Missing required feature trapped before pipeline execution.
+STATUS: PASS

@@ -1,0 +1,15 @@
+Test Case ID: TC-15
+Requirement: Java prototype exception handling
+Test: Invalid numeric input ('abc') handling
+Execution Timestamp: 2026-11-24 00:11:04
+
+Terminal Session Output:
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Nitrogen (0-140): Input error: Enter a numeric value.
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Goodbye.
+
+Result: Non-numeric input trapped with user-friendly error; program returns cleanly to menu.
+STATUS: PASS

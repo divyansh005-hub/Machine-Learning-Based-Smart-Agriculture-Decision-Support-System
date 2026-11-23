@@ -1,0 +1,12 @@
+Test Case ID: TC-11
+Requirement: FR-11
+Test: Dataset summaries and insights validation
+Execution Timestamp: 2026-11-24 00:11:04
+
+Audited Dataset Profiles:
+  - Crop: 2200 rows, 8 cols, 0 missing, 0 dups
+  - Fertilizer: 10000 rows, 20 cols, 0 missing, 0 dups
+  - Yield (Deduplicated): 25932 rows, 7 cols, 0 missing, 0 dups
+
+Result: Dataset metrics accurately computed and displayed.
+STATUS: PASS

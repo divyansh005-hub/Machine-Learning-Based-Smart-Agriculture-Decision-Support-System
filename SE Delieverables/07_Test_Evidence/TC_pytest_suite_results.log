@@ -1,0 +1,42 @@
+AgriSmart Automated Pytest Test Suite Results
+Execution Timestamp: 2026-11-24 00:11:04
+Environment: Python 3.12.10 | Platform: Windows
+
+STDOUT:
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Divyansh Bhatt\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: D:\NIIT_University\Projects\Smart Agricultutre
+plugins: anyio-4.12.0, locust-2.45.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 22 items
+
+tests/test_app_smoke.py::test_app_and_ui_modules_importable PASSED       [  4%]
+tests/test_data_loaders.py::test_load_crop_data PASSED                   [  9%]
+tests/test_data_loaders.py::test_load_fertilizer_data PASSED             [ 13%]
+tests/test_data_loaders.py::test_load_yield_data_deduplication PASSED    [ 18%]
+tests/test_data_loaders.py::test_load_yield_data_aggregation PASSED      [ 22%]
+tests/test_data_loaders.py::test_missing_file_raises PASSED              [ 27%]
+tests/test_data_loaders.py::test_invalid_schema_raises PASSED            [ 31%]
+tests/test_data_loaders.py::test_dataset_summary PASSED                  [ 36%]
+tests/test_inference.py::test_crop_predictor_valid PASSED                [ 40%]
+tests/test_inference.py::test_crop_predictor_missing_feature PASSED      [ 45%]
+tests/test_inference.py::test_crop_predictor_out_of_range PASSED         [ 50%]
+tests/test_inference.py::test_fertilizer_predictor_valid PASSED          [ 54%]
+tests/test_inference.py::test_fertilizer_predictor_invalid_category PASSED [ 59%]
+tests/test_inference.py::test_yield_predictor_valid PASSED               [ 63%]
+tests/test_inference.py::test_yield_predictor_unseen_area PASSED         [ 68%]
+tests/test_inference.py::test_missing_model_artifact_raises PASSED       [ 72%]
+tests/test_preprocessing.py::test_crop_preprocessor PASSED               [ 77%]
+tests/test_preprocessing.py::test_fertilizer_preprocessor_with_unknown_categories PASSED [ 81%]
+tests/test_preprocessing.py::test_yield_preprocessor_with_unseen_area PASSED [ 86%]
+tests/test_smoke.py::test_model_artifacts_exist PASSED                   [ 90%]
+tests/test_smoke.py::test_reports_exist_and_valid PASSED                 [ 95%]
+tests/test_smoke.py::test_metadata_json_structure PASSED                 [100%]
+
+============================= 22 passed in 23.81s =============================
+
+STDERR:
+
+Exit Code: 0
+OVERALL STATUS: PASS

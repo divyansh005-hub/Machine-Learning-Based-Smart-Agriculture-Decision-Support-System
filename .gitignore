@@ -47,3 +47,6 @@ Desktop.ini
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local alias junction
+SE Deliverables/
