@@ -1,0 +1,15 @@
+Test Case ID: TC-05
+Requirement: FR-05, FR-07
+Test: Valid fertilizer recommendation input
+Inputs: 12 numeric features + 7 categorical features (Low N=35 kg/ha)
+Execution Timestamp: 2026-11-24 00:11:04
+
+Prediction Output:
+  Recommended Fertilizer: Urea
+  Confidence: 90.0%
+  Description: High-nitrogen synthetic fertilizer (46-0-0) applied to address nitrogen deficits during rapid vegetative growth.
+  Top Candidates: [{'fertilizer': 'Urea', 'probability': 0.9, 'confidence_pct': 90.0, 'description': 'High-nitrogen synthetic fertilizer (46-0-0) applied to address nitrogen deficits during rapid vegetative growth.'}, {'fertilizer': 'NPK', 'probability': 0.09, 'confidence_pct': 9.0, 'description': 'Complete balanced fertilizer supplying primary macronutrients (Nitrogen, Phosphorus, Potassium) in harmonized ratios.'}, {'fertilizer': 'Compost', 'probability': 0.01, 'confidence_pct': 1.0, 'description': 'Organic matter improving soil structure, water holding capacity, and cation exchange in degraded or acidic soils.'}]
+  Disclaimer Included: True
+
+Result: Nitrogen deficit correctly triggered 'Urea' recommendation.
+STATUS: PASS

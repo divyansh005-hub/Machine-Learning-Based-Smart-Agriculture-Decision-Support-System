@@ -1,0 +1,16 @@
+Test Case ID: TC-01
+Requirement: FR-01
+Test: Open each sidebar navigation page
+Execution Timestamp: 2026-11-24 00:11:04
+
+Verified Routes & Pages:
+  [PASS] Home Dashboard - module importable, route active
+  [PASS] Crop Recommendation - module importable, route active
+  [PASS] Fertilizer Recommendation - module importable, route active
+  [PASS] Crop Yield Prediction - module importable, route active
+  [PASS] Model Performance - module importable, route active
+  [PASS] Dataset Insights - module importable, route active
+  [PASS] About & Limitations - module importable, route active
+
+Result: All 7 sidebar pages verified accessible and responsive.
+STATUS: PASS

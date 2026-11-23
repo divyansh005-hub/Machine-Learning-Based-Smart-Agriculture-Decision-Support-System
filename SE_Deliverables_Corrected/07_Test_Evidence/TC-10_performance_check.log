@@ -1,0 +1,14 @@
+Test Case ID: TC-10
+Requirement: FR-10
+Test: Model performance metrics display and comparison matrix
+Execution Timestamp: 2026-11-24 00:11:04
+
+Verified Artifact: reports/model_comparison.csv (9 candidates evaluated)
+Selected Models Summary:
+                   Module                    Model Primary_Metric_Name  Primary_Metric_Value Secondary_Metric_Name  Secondary_Metric_Value
+      Crop Recommendation            Random Forest            Macro-F1                0.9955              Accuracy                  0.9955
+Fertilizer Recommendation Random Forest (Balanced)            Macro-F1                0.7131              Accuracy                  0.8705
+    Crop Yield Prediction  Random Forest Regressor        RMSE (hg/ha)            20302.3700           MAE (hg/ha)              10454.1900
+
+Result: All empirical benchmark metrics loaded and verified.
+STATUS: PASS

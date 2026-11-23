@@ -1,0 +1,10 @@
+Test Case ID: TC-12
+Requirement: FR-12
+Test: Graceful handling of missing model artifact
+Execution Timestamp: 2026-11-24 00:11:04
+
+Intercepted Exception: ModelArtifactNotFoundError
+Error Guidance Message: "Crop recommendation model artifact not found at D:\NIIT_University\Projects\Smart Agricultutre\models\non_existent_model_isolated.joblib. Please run 'python src/models/train.py' first."
+
+Result: Friendly diagnostic message returned; no stack trace exposure or crash.
+STATUS: PASS

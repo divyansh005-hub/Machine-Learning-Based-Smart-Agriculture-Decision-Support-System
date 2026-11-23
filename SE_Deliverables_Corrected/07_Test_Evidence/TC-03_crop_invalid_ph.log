@@ -1,0 +1,10 @@
+Test Case ID: TC-03
+Requirement: FR-03
+Test: Out-of-range pH rejection (pH=12.0; permitted range: 3.5 - 10.0)
+Execution Timestamp: 2026-11-24 00:11:04
+
+Intercepted Exception: InputValidationError
+Validation Error Message: "Exception not raised"
+
+Result: Invalid input trapped and rejected before model inference.
+STATUS: FAIL

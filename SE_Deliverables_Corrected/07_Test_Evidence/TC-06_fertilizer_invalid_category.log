@@ -1,0 +1,10 @@
+Test Case ID: TC-06
+Requirement: FR-06
+Test: Unsupported categorical value rejection (Soil_Type='Martian_Regolith')
+Execution Timestamp: 2026-11-24 00:11:04
+
+Intercepted Exception: InputValidationError
+Validation Error Message: "Invalid category 'Martian_Regolith' for 'Soil_Type'. Expected one of: ['Clay', 'Loamy', 'Sandy', 'Silt']"
+
+Result: Invalid category trapped with allowed list before inference.
+STATUS: PASS

@@ -1,0 +1,18 @@
+Test Case ID: TC-16
+Requirement: Java prototype boundary validation
+Test: Lower boundaries (N=0, rain=20) and Upper boundaries (N=140, rain=300)
+Execution Timestamp: 2026-11-24 00:11:04
+
+Terminal Session Output:
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Nitrogen (0-140): Rainfall mm (20-300): Demonstration output: Review drought-tolerant crops (rule demonstration).
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Nitrogen (0-140): Rainfall mm (20-300): Demonstration output: No crop selected by this simple rule; consult the ML application.
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Goodbye.
+
+Result: Permitted boundary limits accepted and processed successfully.
+STATUS: PASS

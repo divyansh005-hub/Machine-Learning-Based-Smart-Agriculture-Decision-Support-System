@@ -1,0 +1,15 @@
+Test Case ID: TC-02
+Requirement: FR-02, FR-04
+Test: Valid crop recommendation input
+Inputs: N=90.0 kg/ha, P=42.0 kg/ha, K=43.0 kg/ha, temperature=20.8°C, humidity=82.0%, ph=6.5, rainfall=202.9 mm
+Execution Timestamp: 2026-11-24 00:11:04
+
+Prediction Output:
+  Recommended Crop: rice
+  Confidence: 90.0%
+  Description: Staple cereal crop thriving in submerged paddy soils, warm temperatures, and high humidity.
+  Top Candidates: [{'crop': 'rice', 'probability': 0.9, 'confidence_pct': 90.0, 'description': 'Staple cereal crop thriving in submerged paddy soils, warm temperatures, and high humidity.'}, {'crop': 'jute', 'probability': 0.1, 'confidence_pct': 10.0, 'description': 'Commercial bast fiber requiring warm, humid tropical conditions and heavy seasonal rainfall.'}, {'crop': 'pomegranate', 'probability': 0.0, 'confidence_pct': 0.0, 'description': 'Subtropical arid fruit shrub requiring dry seasons and neutral to slightly alkaline soil.'}]
+  Disclaimer Included: True
+
+Result: Correctly recommended 'rice' based on high humidity and rainfall conditions.
+STATUS: PASS

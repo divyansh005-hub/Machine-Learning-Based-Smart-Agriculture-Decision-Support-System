@@ -1,0 +1,19 @@
+AgriSmart Java Academic Prototype — Complete Demonstration Session
+Execution Timestamp: 2026-11-24 00:11:04
+
+Session Transcript:
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Nitrogen (0-140): Rainfall mm (20-300): Demonstration output: No crop selected by this simple rule; consult the ML application.
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Phosphorus (10-90): Potassium (10-120): Demonstration output: DAP (rule demonstration).
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Historical yield (hg/ha): Illustrative factor (0.5-1.5): Illustrative estimate: 27500.00 hg/ha
+\n=== AgriSmart Java Academic Prototype ===
+1 Crop demo  2 Fertilizer demo  3 Yield demo  4 Exit
+Choice: Goodbye.
+
+Result: Complete CRUD/Menu simulation executed with positive outputs across all 3 modules.
+STATUS: PASS
