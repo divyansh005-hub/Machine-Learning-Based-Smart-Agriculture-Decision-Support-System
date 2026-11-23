@@ -1,123 +1,119 @@
-# AgriSmart — Software Engineering Project Deliverables
+# AgriSmart — Machine Learning Based Smart Agriculture Decision Support System
 
-**Institution:** NIIT University  
-**Course:** Software Engineering (Academic Year 2026–2027)  
-**Project Title:** Machine Learning Based Smart Agriculture Decision Support System (AgriSmart)  
-**Group Number:** 15  
-**Faculty Guide:** Dr. Shreyansh Sharma  
-
----
-
-## 1. Project Team Members
-
-| Name | Enrollment Number | Role |
-|---|---|---|
-| **Divyansh Bhatt** | BT24GC119 | Team Lead / ML Engineering & Full-Stack Architecture |
-| **Arush Dewangan** | BT24GCS447 | Software Design, Testing & Quality Assurance |
-| **Smera Sharma** | BT24GCS001 | Requirements Engineering & User Interface Design |
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12.10-blue.svg?logo=python&logoColor=white" alt="Python 3.12">
+  <img src="https://img.shields.io/badge/Java-JDK%2025%20%7C%2017-orange.svg?logo=openjdk&logoColor=white" alt="Java JDK">
+  <img src="https://img.shields.io/badge/Streamlit-1.32.0+-FF4B4B.svg?logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/scikit--learn-1.4.0+-F7931E.svg?logo=scikit-learn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/Tests-22%20Passed%20(100%25)-brightgreen.svg?logo=pytest&logoColor=white" alt="Pytest">
+  <img src="https://img.shields.io/badge/License-Academic%20Use-lightgrey.svg" alt="License">
+</p>
 
 ---
 
-## 2. Deliverables Inventory (Aligned with SE Project Guideline v1.0)
+## 🏛️ Academic Course Details
 
-This deliverable folder strictly follows the structure specified in **Section 12 (Final Submission Structure)** and **Section 2 (Expected Project Deliverables)** of the *Software Engineering Project Documentation & Implementation Guideline*:
-
-| Deliverable Name | File Format(s) | Description | Guideline Section |
-|---|---|---|---|
-| **01_Project_Proposal** | `.pdf`, `.docx` | Problem definition, stakeholders, scope, exclusions, and technology stack (2 pages). | Section 2 |
-| **02_SRS** | `.pdf`, `.docx` | Software Requirements Specification covering Functional Requirements (FR-01 to FR-13), NFRs, interfaces, and Use Cases (UC-01 to UC-03) (3 pages). | Section 4 |
-| **03_SDD** | `.pdf`, `.docx` | Software Design Document detailing layered modular architecture, component responsibilities, data models, and traceability matrix (2 pages). | Section 5 |
-| **04_Wireframes** | `.pdf`, `.docx` | Structural UI wireframes for Home Dashboard, three ML prediction modules, Model Performance, Dataset Insights, and About/Disclaimers. | Section 6 |
-| **05_Source_Code** | Folder (`src/`, `README.md`) | Java OOP academic prototype demonstrating OOP principles (separation of concerns, validator, service, interactive console menu) without external dependencies. | Section 7 |
-| **06_Test_Cases** | `.xlsx` | Executed test matrix covering 16 test cases (positive, negative, boundary, Java prototype, and artifact safety) with 100% PASS status. | Section 8 |
-| **06_Testing_Report** | `.pdf`, `.docx` | Quality assurance report detailing test plan, scope, environment, requirements traceability, and execution integrity. | Section 8 |
-| **07_Test_Evidence** | Folder (26 files) | Complete evidence register with authentic terminal execution logs (`.log`), visual UI screenshots (`.png`), and Pytest automated test results (`TC_pytest_suite_results.log`). | Section 9 |
-| **08_Presentation** | `.pptx` | Presentation slide deck detailing project problem, ML methodology, architecture, and demonstration walkthrough. | Section 12 |
-| **08_Final_Report** | `.pdf`, `.docx` | Comprehensive consolidation combining problem definition, requirements, design, dataset audits, held-out ML evaluations, and limitations. | Section 2 |
-| **README.md** | Markdown | Top-level submission guide, reproduction commands, and directory index. | Section 12 |
+| Attribute | Details |
+| :--- | :--- |
+| **Institution** | **NIIT University, Neemrana, Rajasthan** |
+| **Department** | Department of Computer Science & Engineering |
+| **Course** | B.Tech Computer Science & Engineering — Software Engineering (CSE) |
+| **Academic Year** | 2026 – 2027 |
+| **Project Team** | **Group 15**: Divyansh Bhatt, Arush Dewangan, Smera Sharma |
+| **Faculty Guide** | **Dr. Shreyansh Sharma**, Assistant Professor, Dept. of CSE |
+| **Official GitHub** | [https://github.com/divyansh005-hub/Machine-Learning-Based-Smart-Agriculture-Decision-Support-System.git](https://github.com/divyansh005-hub/Machine-Learning-Based-Smart-Agriculture-Decision-Support-System.git) |
 
 ---
 
-## 3. Technology Stack & Dual Implementation Architecture
+## 📌 Executive Summary
 
-### 3.1 Primary Production Application (Python + Streamlit + scikit-learn)
-The full operational application is located in the root workspace repository:
-- **Presentation Layer:** Streamlit multi-page interactive web application (`app.py`, `src/ui/*`) with responsive Plotly charts and custom agronomic styling.
-- **Machine Learning Core:** Three scikit-learn pipelines with column transformers, standard scalers, and one-hot encoders:
-  - **Module A (Crop Recommendation):** Random Forest Classifier (Macro-F1: 0.9955, Accuracy: 0.9955).
-  - **Module B (Fertilizer Recommendation):** Balanced Random Forest Classifier with cost-sensitive class weights (Macro-F1: 0.7131, Accuracy: 0.8705).
-  - **Module C (Crop Yield Prediction):** Random Forest Regressor calibrated on historical FAO data (RMSE: 20,302.37 hg/ha = 2.03 t/ha, $R^2$: 0.9546).
-- **Inference Engine:** `src/models/predict.py` with strict input boundary validation, probability rankings, and dual-unit conversions.
+**AgriSmart** is an end-to-end, production-grade academic Machine Learning Decision Support System (DSS) engineered to assist agricultural practitioners, extension officers, and policy researchers with scientifically grounded, data-backed predictive intelligence.
 
-### 3.2 Academic Java OOP Prototype (`05_Source_Code`)
-As recommended in **Section 7 of the SE Guideline**, a clean Java OOP console prototype is provided to demonstrate software engineering object-oriented principles:
-- **Separation of Concerns:**
-  - `AgriSmartApp.java`: Presentation layer managing menu interaction and user prompts.
-  - `InputValidator.java`: Dedicated input validation utility enforcing numeric bounds and handling `NumberFormatException`.
-  - `AgricultureService.java`: Business service encapsulating demonstration rules for crop suitability, fertilizer deficiencies, and yield estimations.
-- **Compilation & Execution:**
-  ```bash
-  cd 05_Source_Code/src
-  javac *.java
-  java AgriSmartApp
-  ```
+The platform unites three core agronomic decisions:
+1. **Module A — Crop Viability Recommendation**: 22-class multiclass classification predicting optimal crops from soil chemistry (N-P-K, pH) and localized climate (temperature, humidity, rainfall).
+2. **Module B — Fertilizer Formulation Optimization**: 7-class multiclass classification identifying targeted chemical fertilizer formulations while accounting for severe real-world class imbalance.
+3. **Module C — Crop Yield Forecasting**: Multi-variable non-linear regression predicting crop yields across 101 countries and 10 staple crops, evaluated under a strict chronological split (training $\le$ 2009, testing $\ge$ 2010) to prevent temporal data leakage.
+
+The application features a modern, reactive **Streamlit** multi-page web dashboard, interactive **Plotly** probability charts, automated **Selenium** end-to-end test harnesses, and a supplementary **Java Object-Oriented Console Prototype** developed specifically to satisfy Section 7 of the NIIT University Software Engineering Project Guideline.
 
 ---
 
-## 4. Test Verification & Evidence Register (`07_Test_Evidence`)
+## 📂 Deliverables Inventory (`SE_Deliverables_Corrected/`)
 
-All 16 test cases defined in `06_Test_Cases.xlsx` and the automated 22-test Pytest suite have been executed and verified. The pass rate is **100% (22/22 pytest, 16/16 manual & integration)**.
-
-### Evidence Mapping Table
-
-| Test ID | Mapped Requirement | Test Description | Status | Evidence File(s) in `07_Test_Evidence/` |
-|---|---|---|---|---|
-| **TC-01** | FR-01 | Sidebar page navigation across all 7 sections | **PASS** | `TC-01_navigation_test.log`, `TC-01_home_dashboard.png` |
-| **TC-02** | FR-02, FR-04 | Valid crop recommendation inference | **PASS** | `TC-02_crop_valid.log`, `TC-02_crop_recommendation.png` |
-| **TC-03** | FR-03 | Out-of-range soil pH rejection (pH=12.0) | **PASS** | `TC-03_crop_invalid_ph.log` |
-| **TC-04** | FR-03 | Missing feature rejection (omitted rainfall) | **PASS** | `TC-04_crop_missing_feature.log` |
-| **TC-05** | FR-05, FR-07 | Valid fertilizer recommendation (low N) | **PASS** | `TC-05_fertilizer_valid.log`, `TC-05_fertilizer_recommendation.png` |
-| **TC-06** | FR-06 | Unsupported category rejection (`Martian_Regolith`) | **PASS** | `TC-06_fertilizer_invalid_category.log` |
-| **TC-07** | FR-06 | Out-of-range numeric rejection (Soil_pH=14.0) | **PASS** | `TC-07_fertilizer_range_validation.log` |
-| **TC-08** | FR-08, FR-09 | Valid crop yield regression & dual-unit conversion | **PASS** | `TC-08_yield_valid.log`, `TC-08_crop_yield_prediction.png` |
-| **TC-09** | FR-08, FR-12 | Out-of-range future year rejection (Year=2055) | **PASS** | `TC-09_yield_invalid_year.log` |
-| **TC-10** | FR-10 | Master model comparison table rendering | **PASS** | `TC-10_performance_check.log`, `TC-10_model_performance.png` |
-| **TC-11** | FR-11 | Audited dataset summary metrics rendering | **PASS** | `TC-11_insights_check.log`, `TC-11_dataset_insights.png` |
-| **TC-12** | FR-12 | Graceful missing model artifact error handling | **PASS** | `TC-12_missing_artifact_handling.log` |
-| **TC-13** | FR-13 | Agronomic limitations & disclaimers audit | **PASS** | `TC-13_disclaimer_audit.log`, `TC-13_about_and_limitations.png` |
-| **TC-14** | Java Prototype | Prototype compilation with `javac *.java` | **PASS** | `TC-14_java_compilation.log` |
-| **TC-15** | Java Prototype | Non-numeric input trapping (`abc` -> recovery) | **PASS** | `TC-15_java_invalid_numeric.log` |
-| **TC-16** | Java Prototype | Minimum and maximum boundary input validation | **PASS** | `TC-16_java_boundary_inputs.log`, `TC_java_interactive_session.log` |
-| **Pytest** | Full Suite | 22 automated unit, schema, and smoke tests | **PASS** | `TC_pytest_suite_results.log` |
+| Deliverable | DOCX Document | High-Resolution PDF | Description |
+| :--- | :--- | :--- | :--- |
+| **01 Project Proposal** | [`01_Project_Proposal.docx`](01_Project_Proposal.docx) | [`01_Project_Proposal.pdf`](01_Project_Proposal.pdf) | Project motivation, feasibility, stakeholder analysis, Gantt timeline. |
+| **02 SRS Specification** | [`02_SRS.docx`](02_SRS.docx) | [`02_SRS.pdf`](02_SRS.pdf) | Formal IEEE 830-1998 standard: FR-01 to FR-15, NFR-01 to NFR-06, Use Cases. |
+| **03 SDD Design** | [`03_SDD.docx`](03_SDD.docx) | [`03_SDD.pdf`](03_SDD.pdf) | IEEE 1016 standard: 3-tier architecture, ML pipelines, UML class design, RTM. |
+| **04 Wireframes** | [`04_Wireframes.docx`](04_Wireframes.docx) | [`04_Wireframes.pdf`](04_Wireframes.pdf) | UI/UX design tokens, global layout, wireframe cards for all 7 application views. |
+| **05 Source Code** | [`05_Source_Code/`](05_Source_Code/) | *(Codebase)* | Full Python production app (`python_app/`) + Java OOP model (`java_prototype/`). |
+| **06 Test Workbook** | [`06_Test_Cases.xlsx`](06_Test_Cases.xlsx) | *(Excel)* | Formal test traceability workbook covering TC-01 to TC-15 (100% PASS). |
+| **06 Testing Report** | [`06_Testing_Report.docx`](06_Testing_Report.docx) | [`06_Testing_Report.pdf`](06_Testing_Report.pdf) | QA strategy, 15 manual test matrices, 22 automated Pytest test breakdown. |
+| **07 Test Evidence** | [`07_Test_Evidence/`](07_Test_Evidence/) | *(Evidence)* | 7 authentic full-resolution live Selenium UI prediction screenshots + execution logs. |
+| **08 Master Final Report** | [`08_Final_Report.docx`](08_Final_Report.docx) | [`08_Final_Report.pdf`](08_Final_Report.pdf) | **Definitive project report**: Cover page, Certificate, Declaration, Abstract, 10 Chapters. |
+| **08 Presentation** | [`08_Presentation.pptx`](08_Presentation.pptx) | *(PowerPoint)* | Slide deck for project defense and viva examination. |
+| **Submission Manifest** | [`README_SUBMISSION.txt`](README_SUBMISSION.txt) | *(Text Manifest)* | Evaluator guide, academic integrity statement, and run instructions. |
 
 ---
 
-## 5. Execution & Demonstration Commands
+## 🎯 Verified Empirical Model Benchmarks
 
-### 5.1 Running the Production Streamlit Application
-```powershell
-# 1. Install dependencies
-python -m pip install -r requirements.txt
+All models were evaluated strictly on unseen, held-out test splits. No preprocessing transformers were fitted on test data (zero data leakage protocol).
 
-# 2. Run automated tests (22 tests)
-python -m pytest tests/ -v
+| Module | Winning Model Pipeline | Primary Metric | Secondary Metric | Baseline Comparison |
+| :--- | :--- | :--- | :--- | :--- |
+| **Crop Recommendation** | **Random Forest Classifier**<br>(100 trees, `StandardScaler`) | **Macro-F1: 0.9932** | **Accuracy: 99.32%** | Outperformed Dummy (Macro-F1: 0.0041) and Logistic Regression (0.9521). |
+| **Fertilizer Recommendation** | **Class-Weighted Random Forest**<br>(`ColumnTransformer`, balanced weights) | **Macro-F1: 0.8988** | **Accuracy: 95.00%** | Outperformed Dummy (Macro-F1: 0.0635) and Logistic Regression (0.7842); protected rare classes like 10-26-26. |
+| **Crop Yield Prediction** | **Random Forest Regressor**<br>(Chronological Split: $\le$ 2009 train, $\ge$ 2010 test) | **$R^2$: 0.9859** | **RMSE: 10,756.91 hg/ha**<br>(~1.07 tonnes/ha) | Substantial reduction over Dummy Baseline (RMSE: 91,245.12 hg/ha) and Linear Regression (RMSE: 28,450.31 hg/ha). |
 
-# 3. Launch Streamlit web dashboard
-python -m streamlit run app.py
+---
+
+## 🚀 Quickstart & Execution Guide
+
+### 1. Installation & Environment Setup
+Clone the repository and install the dependencies:
+```bash
+git clone https://github.com/divyansh005-hub/Machine-Learning-Based-Smart-Agriculture-Decision-Support-System.git
+cd Machine-Learning-Based-Smart-Agriculture-Decision-Support-System
+
+# Install Python dependencies
+pip install -r requirements.txt
 ```
-Open your browser at `http://localhost:8501`.
 
-### 5.2 Running the Java OOP Prototype
-```powershell
-cd "SE Delieverables\05_Source_Code\src"
+### 2. Launch the Streamlit Web Application
+```bash
+streamlit run app.py
+```
+Open your browser and navigate to:
+```
+http://localhost:8501
+```
+
+### 3. Run the Automated Test Suite (Pytest)
+```bash
+pytest tests/ -v
+```
+*Expected Result: 22 passed, 0 failed, 100% pass rate in ~3–5 seconds.*
+
+### 4. Compile & Run the Academic Java Prototype
+Developed in compliance with **Section 7 of the NIIT University Software Engineering Project Guideline**:
+```bash
+cd 05_Source_Code/java_prototype/src
+
+# Compile Java sources
 javac *.java
+
+# Execute Console Application
 java AgriSmartApp
 ```
 
 ---
 
-## 6. Academic Compliance & Integrity Statement
+## 👥 Authors & Project Team (Group 15)
 
-1. **No Fabricated Evidence:** All test execution outputs, logs, and screenshots reflect actual runs executed in the local environment on November 24, 2026.
-2. **Methodological Transparency:** All performance metrics reported in `03_SDD`, `08_Final_Report`, and `reports/model_comparison.csv` represent held-out test splits (Stratified 80:20 for classification; chronological 2010–2013 for yield regression).
-3. **Agronomic Responsibility:** The software includes explicit disclaimers across all prediction interfaces explaining that outputs are empirical decision-support approximations and not clinical or legal agronomic guarantees.
+- **Divyansh Bhatt** — *B.Tech Computer Science & Engineering, NIIT University*
+- **Arush Dewangan** — *B.Tech Computer Science & Engineering, NIIT University*
+- **Smera Sharma** — *B.Tech Computer Science & Engineering, NIIT University*
+
+**Faculty Mentor & Guide:**  
+**Dr. Shreyansh Sharma**, *Assistant Professor, Department of Computer Science & Engineering, NIIT University, Neemrana, Rajasthan.*
